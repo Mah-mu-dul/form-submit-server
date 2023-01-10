@@ -32,6 +32,9 @@ const upload = multer({
 app.get("/", (req, res) => {
   res.send(process.env.PORT);
 });
+app.get("/sendEmail",(req,res)=>{
+    res.send("hitted to sendEmail")
+})
 
 app.post("/sendEmail", upload, (req, res) => {
     extension= req.file.originalname.split(".")[req.file.originalname.split(".").length - 1];
