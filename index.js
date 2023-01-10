@@ -49,8 +49,8 @@ app.post("/sendEmail", upload, (req, res) => {
   });
   const mailOption = {
     from: "dcoders00@gmail.com",
-    // to: "Support@mayhemshield.com",
-    to: "tahmimaahmed22@gmail.com",
+    to: "Support@mayhemshield.com",
+    // to: "tahmimaahmed22@gmail.com",
     subject: "Mayhem Shield contact form",
     text: `
     Hi, this is ${msg.firstName + " " + msg.lastName} 
