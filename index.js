@@ -49,7 +49,7 @@ app.post("/sendEmail", upload, (req, res) => {
   });
   const mailOption = {
     from: "dcoders00@gmail.com",
-    to: "tahmimaahmed22@gmail.com",
+    to: "support@mayhemshield.com",
     // to: "tahmimaahmed22@gmail.com",
     subject: "Mayhem Shield contact form",
     text: `
