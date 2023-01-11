@@ -73,14 +73,14 @@ app.post("/sendEmail", upload, (req, res) => {
     //    unlinkAsync("./uploads/file.jpg");
     fs.unlink(`./uploads/file.${extension}`,function(err){
         if(err){
-            res.send(err)
+            res.send(err.message)
         }else{
             console.log("deleted")
         }
     })
      }
    });
-  res.send("send mail");
+  res.send("Email sent");
 });
 
 app.listen(process.env.PORT || 8000, () => {
