@@ -68,12 +68,13 @@ app.post("/sendEmail", upload, (req, res) => {
     transporter.sendMail(mailOption, (err, info) => {
      if (err) {
        console.log(err);
+       res.send(err)
      } else {
        console.log("email sent " + info.response);
     //    unlinkAsync("./uploads/file.jpg");
     fs.unlink(`./uploads/file.${extension}`,function(err){
         if(err){
-            res.send(err.message)
+            return res.send(err.message)
         }else{
             console.log("deleted")
         }
