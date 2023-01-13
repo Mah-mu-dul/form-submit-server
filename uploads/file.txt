@@ -1,5 +1,0 @@
-1. Arduino data read ussing jode js
-2. graph ploting library of node js ( offline)
-3. Making graphs using react
-4.  geting data from express using json 
-5. Arduino code that makes dummy data for node js

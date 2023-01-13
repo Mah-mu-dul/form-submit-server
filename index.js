@@ -43,14 +43,14 @@ app.post("/sendEmail", upload, (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "dcoders00@gmail.com",
-      pass: "mfhnemtnjingnfkg",
+      user: process.env.EMAIL,
+      pass: process.env.PASS,
     },
   });
   const mailOption = {
-    from: "dcoders00@gmail.com",
-    to: "support@mayhemshield.com",
-    // to: "tahmimaahmed22@gmail.com",
+    from: process.env.EMAIL,
+    // to: "support@mayhemshield.com",
+    to: "tahmimaahmed22@gmail.com",
     subject: "Mayhem Shield contact form",
     text: `
     Hi, this is ${msg.firstName + " " + msg.lastName} 
